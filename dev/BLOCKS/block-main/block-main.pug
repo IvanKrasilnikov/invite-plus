@@ -1,0 +1,136 @@
+include ../../../node_modules/bemto.pug/bemto
+
++b.block-main.row
+  +e.panel-column.col.s3
+    +e.panel-column-photo-wrapper
+      +e(src="img/panel-photo.jpg").panel-column-photo
+    +e.H3.panel-column-name
+      | Владимир Владимирович Владимиров-Владов
+    +e(href="#").panel-column-link
+      | Привязать аккаунт Facebook
+    +e(href="#modal-pricing").panel-column-button.btn.waves-effect.waves-light
+      | Продлить лицензию
+    +e.panel-column-license-status.
+      Лицензия действительна до
+      #[span 11.05.2016]
+    +e.panel-column-key-card
+      +e.panel-column-key-title
+        | Ваш ключ:
+      +e.panel-column-key-number
+        | a07a4-d33c8-61027-27c59-6147f
+    +e.UL.panel-column-bottom
+      +e.panel-column-bottom-item
+        +e(href="text-page.html").panel-column-bottom-link Контакты
+      +e.panel-column-bottom-item
+        +e(href="#modal-support").panel-column-bottom-link Техподдержка
+      +e.panel-column-bottom-item
+        +e(href="text-page.html").panel-column-bottom-link Политика конфиденциальности
+      +e.panel-column-bottom-item
+        +e(href="text-page.html").panel-column-bottom-link Пользовательское соглашение
+
+  +e.content-column.col.s9
+    +e.content-column-tabs-wrapper.col.s12
+      +e.UL.content-column-tabs.tabs
+        +e.content-column-tab.tab.col.s3
+          a(href='#column-workers').active Рабочие аккаунты
+        +e.content-column-tab.tab.col.s3
+          a(href='#column-fan') Мои страницы
+        +e.content-column-tab.tab.col.s3
+          a(href='#column-important') Важные посты
+        +e.content-column-tab.tab.col.s3.disabled
+          a(href='#column-stat') Статистика
+
+    +e.content-column-container#column-workers.col.s12
+
+      +b.item-workers
+        +e.header
+          +e.add-account-wrapper
+            // .disabled
+            +e(href="#modal-add-acc").add-account-button.btn.waves-effect.waves-light Добавить аккаунт
+            +e.add-account-balance
+              +e.add-account-text осталось
+              +e.add-account-num 5
+          +e.buy-account.btn.waves-effect.waves-light.tooltipped(
+            href="#"
+            data-tooltip="Согласно недавно введенным в Facebook правилам (ограничениям) в течении 12 часов от имени одного аккаунта можно разослать только 500 приглашений."
+          ).
+            Приобрести еще 500 приглашений
+            #[sup *]
+
+        +e.UL.content
+
+          mixin content-account(imgUrl, name, num)
+            +e.LI.content-account
+              +e(src=imgUrl).content-img
+              +e.content-name= name
+              +e.content-balance
+                +e.content-balance-text осталось
+                +e.content-balance-num= num
+
+          +content-account('img/panel-photo-wrapper.jpg', 'Аристарх Иванов', 358)
+          +content-account('img/panel-photo.jpg', 'Владимир Владимирович Владимиров-Владов Владимир Владимирович Владимиров-Владов Владимир Владимирович Владимиров-Владов', 234)
+          +content-account('img/panel-photo.jpg', 'Владимир Владимирович Владимиров-Владов', 3453)
+          +content-account('img/panel-photo-wrapper.jpg', 'Аристарх Иванов', 3453245325)
+          +content-account('img/panel-photo.jpg', 'Владимир Владимирович Владимиров-Владов', 345325)
+          +content-account('img/panel-photo-wrapper.jpg', 'Владимир Владимирович Владимиров-Владов Владимир Владимирович Владимиров-Владов Владимир Владимирович Владимиров-Владов', 4575868)
+
+    +e.content-column-container#column-fan.col.s12
+
+      +b.item-fan
+        +e.header
+          +e.add-page-button.btn.waves-effect.waves-light.tooltiped(
+            href="#modal-add-fan"
+            data-tooltip="Если страница не добавлена, то сервис ею не занимается."
+          ).
+            Добавить страницу
+
+        +e.UL.content
+
+          mixin content-page(name, num)
+            +e.LI.content-page
+              +e.content-name= name
+              +e.content-likes-wrapper
+                +e.content-likes-text Лайков:
+                +e.content-likes-num= num
+              +e(href="#").content-url https://facebook.com/549870095201030_680797715441600
+              +e.content-page-remove.btn-flat.waves-effect.waves-light Удалить
+
+          +content-page('Паровозик: всё о развитии ребёнка', 358)
+          +content-page('Танцевальный центр Леора', 234)
+          +content-page('Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 3453)
+          +content-page('Паровозик: всё о развитии ребёнка', 358)
+          +content-page('Танцевальный центр Леора', 234)
+          +content-page('Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 3453)
+
+    +e.content-column-container#column-important.col.s12
+
+      +b.item-important
+        +e.header
+          +e.add-page-button.btn.waves-effect.waves-light.tooltiped(
+            href="#modal-add-important"
+            data-tooltip="Вы можете добавлять отдельные посты, которые будут обрабатываться в первую очередь, независимо от того, попали они в выборку или нет."
+          ).
+            Добавить пост
+
+        +e.UL.content
+
+          mixin content-page(name, num)
+            +e.LI.content-page
+              +e.content-name= name
+              +e.content-likes-wrapper
+                +e.content-likes-text Лайков:
+                +e.content-likes-num= num
+              +e(href="#").content-url https://facebook.com/549870095201030_680797715441600
+              +e.content-page-remove.btn-flat.waves-effect.waves-light Удалить
+
+          +content-page('Танцевальный центр Леора', 234)
+          +content-page('Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 3453)
+          +content-page('Паровозик: всё о развитии ребёнка', 358)
+          +content-page('Паровозик: всё о развитии ребёнка', 358)
+          +content-page('Танцевальный центр Леора', 234)
+          +content-page('Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 3453)
+          +content-page('Паровозик: всё о развитии ребёнка', 358)
+          +content-page('Паровозик: всё о развитии ребёнка', 358)
+
+
+    +e.content-column-container#column-stat.col.s12

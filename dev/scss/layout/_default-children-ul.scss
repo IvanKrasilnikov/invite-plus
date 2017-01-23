@@ -1,0 +1,10 @@
+.default-children-ul {
+  ul {
+    @include padding(null null null 40px);
+    list-style-type: initial;
+
+    li {
+      list-style-type: initial;
+    }
+  }
+}

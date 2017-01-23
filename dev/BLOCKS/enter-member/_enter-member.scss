@@ -1,0 +1,62 @@
+.enter-member {
+  @extend .z-depth-4;
+  @include position(fixed, 10% 0 null 0);
+  @include margin(null auto);
+  border-radius: 2px;
+  max-height: 70%;
+  overflow-y: auto;
+  width: 400px;
+
+  .tabs {
+    overflow: hidden;
+  }
+
+  .input-field {
+    text-align: left;
+  }
+
+  &__card-wrapper {
+    @include padding(24px);
+  }
+
+  &__card {
+    text-align: center;
+  }
+
+  &__social-login {
+    @include margin(null null 20px);
+    background-color: #3b5998;
+    width: 100%;
+
+    &:hover {
+      background-color: rgba(#3b5998, 0.9);
+    }
+  }
+
+  &__social-login-accent {
+    font-weight: normal;
+  }
+
+  &__separator {
+    @include margin(20px null 10px);
+    @include position(relative);
+
+    &:before {
+      @extend .grey, .lighten-2;
+      @include position(absolute, 12px null null 0);
+      content: '';
+      display: block;
+      height: 1px;
+      width: 100%;
+    }
+  }
+
+  &__separator-text {
+    @extend .grey-text, .text-lighten-1;
+    @include padding(null 10px);
+    @include position(relative);
+    background-color: white;
+    display: inline-block;
+    z-index: 2;
+  }
+}

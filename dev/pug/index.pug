@@ -1,0 +1,31 @@
+include ../../node_modules/bemto.pug/bemto
+
+doctype
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=1200")
+    title invite plus
+
+    link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600&subset=latin,cyrillic")
+    //- // Material Icons
+    //- link(rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons")
+    link(rel="stylesheet" href="css/vendors/materialize/materialize.css")
+    link(rel="stylesheet" href="css/main.css")
+
+  body
+
+    include ../BLOCKS/block-main/block-main
+
+    include ../BLOCKS/modal-add-acc/modal-add-acc
+    include ../BLOCKS/modal-add-fan/modal-add-fan
+    include ../BLOCKS/modal-add-important/modal-add-important
+    include ../BLOCKS/modal-pricing/modal-pricing
+    include ../BLOCKS/modal-support/modal-support
+
+    script(src="js/vendors/jquery-2.2.4.min.js")
+    script(src="js/vendors/materialize.min.js")
+    script(src="js/vendors/jquery.dotdotdot.min.js")
+    script(src="js/main.js")
+    script(src="js/add-fan.js")

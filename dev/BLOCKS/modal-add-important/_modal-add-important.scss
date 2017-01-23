@@ -1,0 +1,13 @@
+.modal-add-important {
+  text-align: center;
+  width: 600px;
+  overflow-y: visible;
+
+  &__title {
+    font-weight: 300;
+  }
+
+  .input-field {
+    text-align: left;
+  }
+}

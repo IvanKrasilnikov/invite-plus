@@ -1,0 +1,70 @@
+.modal-add-fan {
+  text-align: center;
+  width: 600px;
+  overflow-y: visible;
+
+  &__title {
+    font-weight: 300;
+  }
+
+  .input-field {
+    text-align: left;
+  }
+
+  &__categories {
+    display: none;
+  }
+
+  &__categories-choise {
+    text-align: left;
+
+    li {
+      @include position(relative);
+    }
+  }
+
+  &__categories-choise-first {
+    @include padding(null 105px null 20px);
+    @include position(relative);
+    @include text-overflow;
+
+    &:before {
+      @include position(absolute, 20px null null 5px);
+      @include triangle(10px 5px, #9e9e9e, down);
+      content: '';
+      display: block;
+    }
+
+    &_alone {
+      cursor: default;
+
+      &:before {
+        display: none;
+      }
+    }
+  }
+
+  &__categories-choise-button {
+    @include padding(null 15px);
+    @include position(absolute, 10px 15px null null);
+    font-size: $h6-fontsize;
+    height: 25px;
+    line-height: 25px;
+  }
+
+  &__categories-choise-second {
+    @include padding(null 105px null 20px);
+    @include text-overflow;
+    line-height: 45px;
+  }
+
+  &__input-categories-title {
+    font-size: $h6-fontsize;
+    text-align: center;
+  }
+
+  &__input-categories {
+    @extend .grey-text, .text-darken-4;
+    @include padding(20px null null);
+  }
+}

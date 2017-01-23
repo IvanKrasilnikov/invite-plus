@@ -1,0 +1,72 @@
+.item-important {
+  height: 100%;
+  width: 100%;
+
+  &__header {
+    @include padding(10px 15px);
+    border-bottom: 1px solid #eee;// .grey .lighten-2
+    border-top: 1px solid #eee;// .grey .lighten-2
+  }
+
+  &__content {
+    margin: 0 !important;
+    height: calc(100% - 58px);
+    overflow-y: auto;
+  }
+
+  &__content-page {
+    @include padding(10px 15px);
+    @include position(relative);
+
+    &:nth-child(odd) {
+      @extend .grey, .lighten-5;
+    }
+  }
+
+  &__content-name {
+    @include text-overflow;
+    font-size: $h4-fontsize;
+    line-height: 36px;
+    width: calc(100% - 120px);
+  }
+
+  &__content-likes-wrapper {
+    height: 24px;
+    line-height: 24px;
+  }
+
+  &__content-likes-text {
+    @extend .grey-text;
+    display: inline-block;
+    line-height: 24px;
+    vertical-align: middle;
+  }
+
+  &__content-likes-num {
+    @extend .green-text;
+    display: inline-block;
+    font-weight: normal;
+    line-height: 24px;
+    vertical-align: middle;
+  }
+
+  &__content-url {
+    @include text-overflow;
+    line-height: 24px;
+  }
+
+  &__footer {
+    @include padding(10px 15px);
+    border-top: 1px solid #eee;// .grey .lighten-2
+  }
+
+  &__remark-text {
+    font-size: $h6-fontsize;
+    line-height: 16px;
+  }
+
+  &__content-page-remove {
+    @include position(absolute, 10px 15px null null);
+    font-size: 13px;
+  }
+}

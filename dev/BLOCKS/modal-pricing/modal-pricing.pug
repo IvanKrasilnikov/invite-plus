@@ -1,0 +1,24 @@
+include ../../../node_modules/bemto.pug/bemto
+
++b.modal-pricing.modal#modal-pricing
+  .modal-content: form
+    +e.H3.title Выберите подходящий тариф:
+    +e.carousel.carousel
+      mixin item(days, cost, color)
+        +e.pricing-item.carousel-item.hoverable
+          +e.pricing-days(class= color)
+            +e.pricing-days-num= days
+            +e.pricing-days-unit дней
+          +e.pricing-cost(class= color)
+            +e.pricing-cost-num= cost
+              +e.pricing-cost-unit $
+          +e.buy-button.waves-effect.waves-light(
+            href="#"
+            class= color
+          ) Купить
+
+      +item(30, 20, 'green')
+      +item(60, 38, 'blue')
+      +item(90, 45, 'teal')
+      +item(180, 102, 'orange')
+      +item(365, 180, 'red')

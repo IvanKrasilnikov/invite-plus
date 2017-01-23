@@ -1,0 +1,39 @@
+include ../../../node_modules/bemto.pug/bemto
+
++b.enter-member
+  +e.card-wrapper
+    .row: ul.tabs
+      li.tab.col.s6: a(href="#sign-in") Вход
+      li.tab.col.s6: a(href="#reg") Регистрация
+
+    +e.card#sign-in: form
+      +e.social-login.btn.waves-effect.waves-light
+        span Зайти через 
+        +e.SPAN.social-login-accent Facebook
+      +e.separator: +e.separator-text или
+      .input-field
+        +e.INPUT.input.validate#enter-member-sign-email(type="email")
+        label(for="enter-member-sign-email") Email
+      .input-field
+        +e.INPUT.input.validate#enter-member-sign-pass(type="password")
+        label(for="enter-member-sign-pass") Пароль
+      +e.BUTTON.submit.btn.waves-effect.waves-light(type="submit") Войти
+
+    +e.card#reg: form
+      .input-field
+        +e.INPUT.input.validate#enter-member-reg-email(type="email")
+        label(for="enter-member-reg-email") Email
+      .input-field
+        +e.INPUT.input.validate#enter-member-reg-pass(type="password")
+        label(for="enter-member-reg-pass") Пароль
+      .input-field
+        +e.INPUT.input.validate#enter-member-reg-pass-conf(type="password")
+        label(for="enter-member-reg-pass-conf") Подтвердите пароль
+      +e.separator: +e.separator-text Как вас зовут?
+      .input-field
+        +e.INPUT.input.validate#enter-member-reg-name-first(type="text")
+        label(for="enter-member-reg-name-first") Имя
+      .input-field
+        +e.INPUT.input.validate#enter-member-reg-name-last(type="text")
+        label(for="enter-member-reg-name-last") Фамилия
+      +e.BUTTON.submit.btn.waves-effect.waves-light(type="submit") Зарегистрироваться

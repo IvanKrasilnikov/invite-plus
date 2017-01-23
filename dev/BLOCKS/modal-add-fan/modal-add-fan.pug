@@ -1,0 +1,57 @@
+include ../../../node_modules/bemto.pug/bemto
+
++b.modal-add-fan.modal#modal-add-fan
+  .modal-content: form
+    +e.H4.title Заполните поля для добавления страницы:
+    .input-field
+      +e.SELECT.choise-page(required)
+        option(value="" disabled selected) Выберите страницу
+        option(value="id111") Паровозик: всё о развитии ребёнка
+        option(value="id222") Танцевальный центр Леора
+        option(value="id333") Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+    +e.categories
+      +e.UL.categories-choise.collapsible
+        //- +e.LI
+        //-   +e.categories-choise-first.collapsible-header(data-id="123") Cat1 sdfjgb sdbfbg hsdhbfgb bhsdfhg bsdhfg bhsd dsfgh bdshfb ghdsbfh gbdsfhj g
+        //-   +e.categories-choise-button.btn.waves-effect.waves-light Выбрать
+        //-   .collapsible-body
+        //-     ul
+        //-       li
+        //-         +e.categories-choise-second(data-id="12") subcat1
+        //-         +e.categories-choise-button.btn.waves-effect.waves-light Выбрать
+        //-       li
+        //-         +e.categories-choise-second(data-id="13") subcat2 ajsdf sahd hsadf hsdhf hsdhghsdhf sdabfhb shd bsdhfb ggbhdsfb ghdsfb hsdfbh gbsdhfg bsdhf gbsdh
+        //-         +e.categories-choise-button.btn.waves-effect.waves-light Выбрать
+        //- +e.LI
+        //-   +e.categories-choise-first.collapsible-header(data-id="124") Cat2
+        //-   +e.categories-choise-button.btn.waves-effect.waves-light Выбрать
+        //-   .collapsible-body
+        //-     ul
+        //-       li
+        //-         +e.categories-choise-second(data-id="14") subcat1
+        //-         +e.categories-choise-button.btn.waves-effect.waves-light Выбрать
+        //-       li
+        //-         +e.categories-choise-second(data-id="15") subcat2
+        //-         +e.categories-choise-button.btn.waves-effect.waves-light Выбрать
+        //- +e.LI
+        //-   +e.categories-choise-first_alone.collapsible-header(data-id="125") Cat3
+        //-   +e.categories-choise-button.btn.waves-effect.waves-light Выбрать
+
+      .input-field
+        +e.input-categories-title Выбранная категория:
+        +e.INPUT.input-categories(
+          type="text"
+          value=""
+          data-text=""
+          placeholder="Вы еще не выбрали категорию."
+          disabled
+        )
+      +e.INPUT.input-categories-id(
+        type="hidden"
+        value=""
+      )
+
+      +e.BUTTON.submit.btn.disabled.waves-effect.waves-light(
+        type="submit"
+      ) Сохранить

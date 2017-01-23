@@ -1,0 +1,112 @@
+.block-main {
+  @include margin(null null 0);
+  height: 100%;
+
+  @at-root .material-tooltip {
+    font-size: 13px;
+    max-width: 300px;
+
+    .backdrop {
+      @extend .blue, .lighten-2;
+    }
+  }
+
+  &__panel-column {
+    @extend .z-depth-1;
+    @include position(relative);
+    height: 100%;
+    padding: 64px 32px !important;
+    text-align: center;
+    z-index: 2;
+  }
+
+  &__panel-column-photo-wrapper {
+    background-image: url(../img/panel-photo-wrapper.jpg);
+    background-position: center;
+    background-size: contain;
+    border-radius: 50%;
+    display: inline-block;
+    height: 130px;
+    overflow: hidden;
+    width: 130px;
+  }
+
+  &__panel-column-photo {
+    display: block;
+    max-height: 100%;
+    min-height: 100%;
+  }
+
+  &__panel-column-name {
+    font-weight: 300;
+    line-height: 30px;
+  }
+
+  &__panel-column-link {
+    @include margin(null null 10px);
+    display: inline-block;
+  }
+
+  &__panel-column-button {
+    @extend .green;
+    @include margin(null null 10px);
+  }
+
+  &__panel-column-license-status {
+    @include margin(null null 10px);
+    font-size: $h6-fontsize;
+  }
+
+  &__panel-column-key-card {
+    @extend .blue, .lighten-5;
+    @include padding(10px);
+    border-radius: 3px;
+  }
+
+  &__panel-column-key-title {
+    @include margin(null null 10px);
+  }
+
+  &__panel-column-bottom {
+    @include margin(0 null);
+    @include position(absolute, null null 32px 0);
+    padding-left: 32px !important;
+    padding-right: 32px;
+    width: 100%;
+  }
+
+  &__panel-column-bottom-item {
+    @include margin(null 10px null null);
+    @include position(relative);
+    display: inline-block;
+
+    &:not(:last-child)::after {
+      @include position(absolute, null -10px 7px null);
+      background-color: $link-color;
+      border-radius: 50%;
+      content: '';
+      display: block;
+      height: 5px;
+      width: 5px;
+    }
+  }
+
+  &__content-column {
+    height: 100%;
+    padding: 0 !important;
+    overflow: hidden;
+  }
+
+  &__content-column-tabs-wrapper {
+    padding: 0 !important;
+  }
+
+  &__content-column-tabs {
+    overflow: hidden;
+  }
+
+  &__content-column-container {
+    padding: 0 !important;
+    height: calc(100% - 48px);
+  }
+}

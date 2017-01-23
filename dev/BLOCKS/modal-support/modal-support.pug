@@ -1,0 +1,12 @@
+include ../../../node_modules/bemto.pug/bemto
+
++b.modal-support.modal#modal-support
+  .modal-content: form
+    +e.H4.title Заполните форму для связи с техподдержкой:
+    .input-field
+      +e.INPUT.input-email.validate#modal-support-email(type="email")
+      label(for="modal-support-email") Email
+    .input-field
+      +e.TEXTAREA.input-quest.materialize-textarea#modal-support-quest
+      label(for="modal-support-quest") Вопрос
+    +e.BUTTON.submit.btn.waves-effect.waves-light(type="submit") Отправить

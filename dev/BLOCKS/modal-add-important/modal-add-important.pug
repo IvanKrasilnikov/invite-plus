@@ -1,0 +1,15 @@
+include ../../../node_modules/bemto.pug/bemto
+
++b.modal-add-important.modal#modal-add-important
+  .modal-content: form
+    +e.H4.title Заполните поля для добавления поста:
+    .input-field
+      select(required)
+        option(value='' disabled selected) Выберите страницу
+        option(value='1') Паровозик: всё о развитии ребёнка
+        option(value='2') Танцевальный центр Леора
+        option(value='3') Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    .input-field
+      +e.INPUT.input-email.validate#modal-add-important-url(type="url")
+      label(for="modal-add-important-url") Введите URL
+    +e.BUTTON.submit.btn.waves-effect.waves-light(type="submit") Сохранить

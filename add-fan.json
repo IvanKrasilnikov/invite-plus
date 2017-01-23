@@ -1,0 +1,36 @@
+{
+  "categories": [
+    {
+      "name": "Cat1",
+      "id": 123,
+      "subCategories": [
+        {
+          "name": "subcat1",
+          "id": 12
+        },
+        {
+          "name": "subcat2",
+          "id": 13
+        }
+      ]
+    },
+    {
+      "name": "Cat2",
+      "id": 124,
+      "subCategories": [
+        {
+          "name": "subcat1",
+          "id": 14
+        },
+        {
+          "name": "subcat2",
+          "id": 15
+        }
+      ]
+    },
+    {
+      "name": "Cat3",
+      "id": 125
+    }
+  ]
+}

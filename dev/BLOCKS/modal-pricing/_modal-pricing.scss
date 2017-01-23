@@ -1,0 +1,78 @@
+.modal-pricing {
+  text-align: center;
+  width: 700px;
+
+  .modal-content {
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  &__title {
+    font-weight: 300;
+  }
+
+  &__carousel {
+    height: 300px;
+  }
+
+  &__pricing-item {
+    @extend .z-depth-1;
+    @include margin(null null 20px);
+    border-radius: 3px;
+    color: white;
+    height: auto !important;
+    width: 200px !important;
+  }
+
+  &__pricing-days {
+    @extend .lighten-1;
+    @include padding(10px null);
+    border-radius: 3px 3px 0 0;
+  }
+
+  &__pricing-days-num {
+    font-size: $h1-fontsize;
+    font-weight: normal;
+    line-height: 40px;
+  }
+
+  &__pricing-days-unit {
+    font-size: $h5-fontsize;
+    font-weight: 300;
+  }
+
+  &__pricing-cost {
+    @extend .lighten-2;
+    @include padding(5px null);
+  }
+
+  &__pricing-cost-num {
+    @include position(relative);
+    display: inline-block;
+    font-size: $h2-fontsize;
+    font-weight: normal;
+    line-height: 40px;
+  }
+
+  &__pricing-cost-unit {
+    @include position(absolute, null null -3px 100%);
+    display: inline-block;
+    font-size: $h3-fontsize;
+    font-weight: 300;
+    line-height: 40px;
+  }
+
+  &__buy-button {
+    @extend .lighten-3;
+    @include padding(10px null);
+    border-radius: 0 0 3px 3px;
+    color: white;
+    display: block;
+    font-size: $h5-fontsize;
+    text-transform: uppercase;
+
+    &:hover {
+      @extend .lighten-4;
+    }
+  }
+}

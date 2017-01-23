@@ -1,0 +1,86 @@
+.item-workers {
+  height: 100%;
+  width: 100%;
+
+  &__header {
+    @include padding(10px 15px);
+    border-bottom: 1px solid #eee;// .grey .lighten-2
+    border-top: 1px solid #eee;// .grey .lighten-2
+  }
+
+  &__add-account-wrapper {
+    @include padding(null null 10px);
+  }
+
+  &__add-account-balance {
+    @include margin(null null null 15px);
+    display: inline-block;
+  }
+
+  &__add-account-text {
+    @extend .grey-text;
+    display: inline-block;
+    font-size: 13px;
+    line-height: 36px;
+    vertical-align: middle;
+  }
+
+  &__add-account-num {
+    @extend .green-text;
+    display: inline-block;
+    font-size: $h5-fontsize;
+    font-weight: normal;
+    line-height: 36px;
+    vertical-align: middle;
+  }
+
+  &__content {
+    margin: 0 !important;
+    height: calc(100% - 104px);
+    overflow-y: auto;
+  }
+
+  &__content-account {
+    @include padding(10px 15px 20px 100px);
+    @include position(relative);
+
+    &:nth-child(odd) {
+      @extend .grey, .lighten-5;
+    }
+  }
+
+  &__content-img {
+    @include position(absolute, 10px null null 15px);
+    border-radius: 50%;
+    height: 70px;
+    width: 70px;
+  }
+
+  &__content-name {
+    @include text-overflow;
+    font-size: $h4-fontsize;
+    line-height: 40px;
+  }
+
+  &__content-balance {
+    height: 20px;
+    line-height: 20px;
+  }
+
+  &__content-balance-text {
+    @extend .grey-text;
+    display: inline-block;
+    font-size: 13px;
+    line-height: 20px;
+    vertical-align: middle;
+  }
+
+  &__content-balance-num {
+    @extend .green-text;
+    display: inline-block;
+    font-size: $h5-fontsize;
+    font-weight: normal;
+    line-height: 20px;
+    vertical-align: middle;
+  }
+}

@@ -1,0 +1,25 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  outline: none;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  @extend .white, .grey-text, .text-darken-4;
+  font-family: $global-font-family;
+  font-weight: 300;
+  height: 100vh;
+  min-height: $window-min-height;
+  min-width: $window-min-width;
+}
+
+main {
+  display: block;//IE-fix
+}

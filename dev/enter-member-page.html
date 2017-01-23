@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=1200">
+  <title>invite plus enter member</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600&amp;subset=latin,cyrillic">
+  <link rel="stylesheet" href="css/vendors/materialize/materialize.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  <div class="enter-member">
+    <div class="enter-member__card-wrapper">
+      <div class="row">
+        <ul class="tabs">
+          <li class="tab col s6"><a href="#sign-in">Вход</a>
+          </li>
+          <li class="tab col s6"><a href="#reg">Регистрация</a>
+          </li>
+        </ul>
+      </div>
+      <div class="enter-member__card" id="sign-in">
+        <form>
+          <div class="enter-member__social-login btn waves-effect waves-light"><span>Зайти через </span><span class="enter-member__social-login-accent">Facebook</span>
+          </div>
+          <div class="enter-member__separator">
+            <div class="enter-member__separator-text">или</div>
+          </div>
+          <div class="input-field">
+            <input class="enter-member__input validate" id="enter-member-sign-email" type="email" />
+            <label for="enter-member-sign-email">Email</label>
+          </div>
+          <div class="input-field">
+            <input class="enter-member__input validate" id="enter-member-sign-pass" type="password" />
+            <label for="enter-member-sign-pass">Пароль</label>
+          </div>
+          <button class="enter-member__submit btn waves-effect waves-light" type="submit">Войти</button>
+        </form>
+      </div>
+      <div class="enter-member__card" id="reg">
+        <form>
+          <div class="input-field">
+            <input class="enter-member__input validate" id="enter-member-reg-email" type="email" />
+            <label for="enter-member-reg-email">Email</label>
+          </div>
+          <div class="input-field">
+            <input class="enter-member__input validate" id="enter-member-reg-pass" type="password" />
+            <label for="enter-member-reg-pass">Пароль</label>
+          </div>
+          <div class="input-field">
+            <input class="enter-member__input validate" id="enter-member-reg-pass-conf" type="password" />
+            <label for="enter-member-reg-pass-conf">Подтвердите пароль</label>
+          </div>
+          <div class="enter-member__separator">
+            <div class="enter-member__separator-text">Как вас зовут?</div>
+          </div>
+          <div class="input-field">
+            <input class="enter-member__input validate" id="enter-member-reg-name-first" type="text" />
+            <label for="enter-member-reg-name-first">Имя</label>
+          </div>
+          <div class="input-field">
+            <input class="enter-member__input validate" id="enter-member-reg-name-last" type="text" />
+            <label for="enter-member-reg-name-last">Фамилия</label>
+          </div>
+          <button class="enter-member__submit btn waves-effect waves-light" type="submit">Зарегистрироваться</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="js/vendors/jquery-2.2.4.min.js"></script>
+  <script src="js/vendors/materialize.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

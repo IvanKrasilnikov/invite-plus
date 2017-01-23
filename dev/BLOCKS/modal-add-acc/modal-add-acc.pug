@@ -1,0 +1,9 @@
+include ../../../node_modules/bemto.pug/bemto
+
++b.modal-add-acc.modal#modal-add-acc
+  .modal-content: form
+    +e.H4.title Введите Email рабочего аккаунта:
+    .input-field
+      +e.INPUT.input-email.validate#modal-add-acc-email(type="email")
+      label(for="modal-add-acc-email") Email
+    +e.BUTTON.submit.btn.waves-effect.waves-light(type="submit") Сохранить
